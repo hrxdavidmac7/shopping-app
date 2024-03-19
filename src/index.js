@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import { Login } from './components/login/login';
+import { Databinding } from './components/login/data-binding/data-binding';
+import { Twowaybinding } from './components/login/data-binding/twowaybinding';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Twowaybinding />
   </React.StrictMode>
 );
 
