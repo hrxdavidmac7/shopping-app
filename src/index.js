@@ -4,12 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Login } from './components/login/login';
-import { Databinding } from './components/login/data-binding/data-binding';
-import { Twowaybinding } from './components/login/data-binding/twowaybinding';
+
+import { Mountdemo } from './components/login/mountdemo/mountdemo';
+
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Twowaybinding />
+    
+    <Mountdemo/>
+  
   </React.StrictMode>
 );
 

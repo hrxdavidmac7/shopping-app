@@ -1,0 +1,18 @@
+[
+{
+    "Name":"Samsung TV",
+    "Price":45090.0,
+    "Stock": true
+},{
+    "Name":"LLoyd TV",
+    "Price":45780.0,
+    "Stock": true
+},
+{
+    "Name":"LG TV",
+    "Price":45000.0,
+    "Stock": true
+}
+
+
+]

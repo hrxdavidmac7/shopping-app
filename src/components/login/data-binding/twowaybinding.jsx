@@ -9,69 +9,61 @@ export function Twowaybinding(){
     }
     const[name, setName] = useState('TV');
     const[price, setPrice] = useState(45000);
-    const[Stock, setStock] = useState(true);
+    const[stock, setStock] = useState(true);
     const[city, setCity] = useState(-1);
-    function handlenamechange(event){
+    function handleNameChange(event){
        setName (event.target.value)
     }
-    function handlepricechange(event){
+    function handlePriceChange(event){
         setPrice (event.target.value)
      }
-     function handlestockchange(event){
-        setStock (event.target.value)
+     function handleStockChange(event){
+        setStock (event.target.checked)
      }
-     function handlecitychange(event){
+     function handleCityChange(event){
         setCity (event.target.value)
      }
-    return(
+     return(
         <div className="container-fluid">
-            <div className="form-control">
-                <h1>Register product</h1>
+           <div className="row mt-3">
+              <div className="col-3">
+                <h3>Edit Product</h3>
                 <dl>
-                    <dt>Product name</dt>
-                    <dd><input type="text" onChange={handlenamechange}></input></dd>
-                    <dt>Product price</dt>
-                    <dd><input type="number " onChange={handlepricechange}></input></dd>
+                    <dt>Product Name</dt>
+                    <dd><input type="text" onChange={handleNameChange} value={name} className="form-control" /></dd>
+                    <dt>Price</dt>
+                    <dd><input type="number" onChange={handlePriceChange} value={price} className="form-control" /></dd>
                     <dt>Stock</dt>
-                    <dd><input type="checkbox"  onChange={handlestockchange}></input>Available</dd>
-                    <dt>City</dt>
+                    <dd><input type="checkbox" onChange={handleStockChange} checked={stock} className="form-check-input" /> <label>Available</label> </dd>
+                    <dt>Shipped To</dt>
                     <dd>
-                        <select onChange={handlecitychange}>
-
-                            <option>Agara</option>
-                            <option>Lucknow</option>
-                            <option>Sitapur</option>
-                            <option>Delhi</option>
-                            <option>Iris</option>
+                        <select value={city} onChange={handleCityChange} className="form-select">
+                            <option value="-1">Select City</option>
+                            <option value="Delhi">Delhi</option>
+                            <option value="Hyderabad">Hyd</option>
                         </select>
                     </dd>
+                    <dt></dt>
+
+                    <dd> <button className="btn btn-warning">Submit</button></dd>
                 </dl>
-            </div>
-
-            <div className="col-6">
-                <h2>Product details</h2>
-                <dl>
-                    <dt>Name</dt>
-                    <dd>{name}</dd>
-                    <dt>Price</dt>
-                    <dd>{price}</dd>
-                    <dt>Stock</dt>
-                    <dd>{Stock}</dd>
-                    <dt>Shipped to</dt>
-                    <dd>{city}</dd>
-                    
-
-                    
-
-
-
-                </dl>
-
-
-            </div>
-           
-        
+               
+              </div>
+              
+              <div className="col-9">
+                  <h3>Product Details</h3>
+                  <dl className="row">
+                    <dt className="col-3">Name</dt>
+                    <dd className="col-9">{name}</dd>
+                    <dt className="col-3">Price</dt>
+                    <dd className="col-9">{price}</dd>
+                    <dt className="col-3">Stock</dt>
+                    <dd className="col-9">{(stock===true)?"Available":"Out of Stock"}</dd>
+                    <dt className="col-3">Shipped To</dt>
+                    <dd className="col-9">{(city==="-1")?"Please Select City":city}</dd>
+                  </dl>
+              </div>
+           </div>
         </div>
     )
-
 }
