@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
+import axios from 'axios';
 
-import $, { ajax } from 'jquery';
+
 
 
 
@@ -27,16 +28,14 @@ export function Mountdemo(){
     }
 
    function Loadproducts(){
-    $.ajax({
-        method :'get',
-        url :'products.json',
-        success : (response)=>{
-            setProducts(response);
-        }
+    axios.get('products .json')
+    .then(response=>{
+        setProducts(response.data);
+    }).catch(err=>{
+        console.log(err);
     })
-        
-        
-        
+   
+                
    }
    useEffect (()=>{
     Loadproducts();
