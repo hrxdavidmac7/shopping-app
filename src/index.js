@@ -9,13 +9,16 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import { Mountdemo } from './components/login/mountdemo/mountdemo';
 import { Fakestore } from './components/fakestoreapi/fakestore';
+import { Stylebinding } from './components/login/stylebinidng/stylebinding';
+import { ClassBinding } from './components/login/stylebinidng/ClassBinding';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     
-    <Fakestore/>
+   
+    <ClassBinding/>
   
   </React.StrictMode>
 );
