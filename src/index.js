@@ -11,6 +11,8 @@ import { Mountdemo } from './components/login/mountdemo/mountdemo';
 import { Fakestore } from './components/fakestoreapi/fakestore';
 import { Stylebinding } from './components/login/stylebinidng/stylebinding';
 import { ClassBinding } from './components/login/stylebinidng/ClassBinding';
+import { EventBinding } from './components/login/EventBinding/customargsinEvent';
+import { HoverEffect } from './components/login/EventBinding/HoverEffect';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,7 +20,7 @@ root.render(
   <React.StrictMode>
     
    
-    <ClassBinding/>
+    <HoverEffect/>
   
   </React.StrictMode>
 );

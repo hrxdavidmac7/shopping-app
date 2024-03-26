@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function DeleteClick(button, e, cities, rate){
+            document.write(`Button Id=${button.id}<br>Name=${button.name}<br>Class=${button.className}<br> X Poistion=${e.clientX} <br>Ctrl Key=${e.ctrlKey} <br> Cities=${cities.toString()} <br>Rating=${rate.rating} `);
+        }
+    </script>
+</head>
+<body>
+   
+
+    <div id="container">
+        <button id="btnDelete" onclick="DeleteClick(this, event, ['Delhi','Hyd'],{rating:4.3})" name="Delete" class="btn btn-primary">Delete</button>
+    </div>
+</body>
+</html>
