@@ -24,6 +24,10 @@ import { Password } from './components/login/Text-fields/PasswordVerify';
 import { BootstrapProgressBar } from './components/login/Text-fields/BootstrapProgressbar';
 import { Debouncing } from './components/login/Text-fields/debouncing';
 import { DebounceDemo } from './components/login/Text-fields/debouncing2';
+import { Corousel } from './components/login/Text-fields/Corousel';
+import { FormEvent } from './components/login/Text-fields/FormEvents';
+import { ReactForm } from './components/login/ReactForm/ReactForm';
+import { Formik } from './components/login/ReactForm/formik';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -31,7 +35,8 @@ root.render(
   <React.StrictMode>
     
    
-   <DebounceDemo/>
+   <Formik/>
+   
 
   
   </React.StrictMode>
