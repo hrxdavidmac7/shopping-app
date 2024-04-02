@@ -28,6 +28,8 @@ import { Corousel } from './components/login/Text-fields/Corousel';
 import { FormEvent } from './components/login/Text-fields/FormEvents';
 import { ReactForm } from './components/login/ReactForm/ReactForm';
 import { Formik } from './components/login/ReactForm/formik';
+import { FormikForm } from './components/login/ReactForm/Formikform';
+import { Hookform } from './components/login/ReactForm/reactHookform';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -35,7 +37,8 @@ root.render(
   <React.StrictMode>
     
    
-   <Formik/>
+
+   <Hookform/>
    
 
   
