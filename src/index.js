@@ -1,35 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { Login } from './components/login/login';
-import { MouseMove } from './components/login/EventBinding/MouseMove';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
-import { Mountdemo } from './components/login/mountdemo/mountdemo';
-import { Fakestore } from './components/fakestoreapi/fakestore';
-import { Stylebinding } from './components/login/stylebinidng/stylebinding';
-import { ClassBinding } from './components/login/stylebinidng/ClassBinding';
-import { EventBinding } from './components/login/EventBinding/customargsinEvent';
-import { HoverEffect } from './components/login/EventBinding/HoverEffect';
-import { ButtonEvent } from './components/login/EventBinding/ButtonEvent';
-import { MouseOut } from './components/login/EventBinding/MouseOverOutEvent';
-import { MouseUpDown } from './components/login/EventBinding/MouseUpDown';
-import { InputField } from './components/login/Text-fields/InputField';
-import { ClipBoardEvent } from './components/login/Text-fields/ClipBoardEvent';
-import { ElementState } from './components/login/Text-fields/ElementStateEvent';
-import { Password } from './components/login/Text-fields/PasswordVerify';
-import { BootstrapProgressBar } from './components/login/Text-fields/BootstrapProgressbar';
-import { Debouncing } from './components/login/Text-fields/debouncing';
-import { DebounceDemo } from './components/login/Text-fields/debouncing2';
-import { Corousel } from './components/login/Text-fields/Corousel';
-import { FormEvent } from './components/login/Text-fields/FormEvents';
-import { ReactForm } from './components/login/ReactForm/ReactForm';
-import { Formik } from './components/login/ReactForm/formik';
-import { FormikForm } from './components/login/ReactForm/Formikform';
-import { Hookform } from './components/login/ReactForm/reactHookform';
+import { HookDemo } from './Hooks/MountUnmount';
+import { ReducerDemo } from './Hooks/reducer/reducer';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -38,8 +15,7 @@ root.render(
     
    
 
-   <Hookform/>
-   
+<ReducerDemo/>
 
   
   </React.StrictMode>
