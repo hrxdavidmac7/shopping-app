@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        // class Database{
+        //  constructor(){
+        //         document.write("Conneccted to databse..<br>");
+
+        //     }
+        //    Insert(){
+        //     document.write("record inserted...");
+        //    }
+        //    Delete(){
+        //     document.write("record Deleted...");
+        //    }
+        // }
+        // function InsertClick(){
+        //     let obj = new Database();
+        //     obj.Insert();
+        // }
+        // function DeleteClick(){
+        //     let obj = new Database();
+        //     obj.Delete();
+        // }
+
+
+        class Window7{
+            plugin = "Plug-n-play";
+            Mspaint = "Paint for drawings";
+            Print(){
+               
+                document.write(`${this.plugin}<br>${this.Mspaint}`);
+            }
+
+        }
+        class Window8{
+
+           
+            Defender = "New Windows Defender";
+            ODBC = "New ODBC Store";
+            Print(){
+                let obj = new Window7();
+                 obj.Print();
+                document.write(`${this.Defender}<br>${this.ODBC}`);
+            }
+        }
+        class Window10{
+            Paint3D ="New #d Paint";
+            Phone ="New Conncet to phone";
+            Print(){
+                let obj = new Window8();
+                obj.Print();
+                document.write(`${this.Paint3D}<br>${this.Phone}`);
+            }
+        }
+        function InstallClick(){
+            var version = document.querySelector('select').value;
+            switch(version){
+                case "win7":
+                document.write("<h2>Windows-7 Installed</h2>") ;
+                    let obj1 = new Window7();
+                    obj1.Print();
+                    break;
+                case "win8":
+                document.write("<h2>Windows-8 Installed</h2>") ;
+                    let obj2 = new Window8();
+                    obj2.Print();
+                    break;
+                case "win10":
+                document.write("<h2>Windows-10 Installed</h2>") ;
+                    let obj3 = new Window10();
+                    obj3.Print();
+                    break;
+                case "default":
+                document.write("Please select a version");
+                    break;
+            }
+               
+            
+        }
+    </script> -->
+
+    <!-- Polymorphism in javascript -->
+    <script>
+        class Employee
+        {
+            FirstName;
+            LastName;
+            Designation;
+            Print(){
+                document.write(`${this.FirstName} ${this.LastName} - ${this.Designation}<br>`);
+            }
+        }
+        class Developer extends Employee
+        {
+            FirstName = "Raj";
+            LastName = "Kumar";
+            Designation = "Developer";
+            Role = "Developer Role : Build, Debug, Test, Deploy";
+            Print(){
+                super.Print();
+                document.write(`${this.Role}`);
+            }
+        }
+        class Admin extends Employee
+        {
+            FirstName = "Kiran";
+            LastName = "Kumar";
+            Designation = "Admin";
+            Role = "Admin Role :Authorizations";
+            Print(){
+                super.Print();
+                document.write(`${this.Role}`);
+            }
+        }
+        class Manager extends Employee
+        {
+            FirstName = "Tom";
+            LastName = "Hanks";
+            Designation = "Manager";
+            Role = "Manager Role : Approvals";
+            Print(){
+                super.Print();
+                document.write(`${this.Role}`);
+            }
+        }
+        let employees = new Array(new Developer(), new Admin(), new Manager());
+        let designation = prompt("Enter Designation");
+        for(var employee of employees)
+        {
+            if(employee.Designation==designation){
+                employee.Print();
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- <button onclick="InsertClick()">Insert</button>
+    <button onclick="DeleteClick()">Delete</button> -->
+
+    <h2>Install Window</h2>
+    <select class="form-control">
+        <option value="default">Select Version</option>
+        <option value="win7">Window7</option>
+        <option value="win8">Window8</option>
+        <option value="win10">Window10</option>
+       
+    </select>
+    <button onclick="InstallClick()">Insatll</button>
+</body>
+</html>

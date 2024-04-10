@@ -8,7 +8,7 @@ function reducer(state, action){
             return{ CartCount: state.CartCount+1 } 
         case 'remove':
             return{ CartCount: state.CartCount-1 }
-            case 'nul':
+        case 'nul':
                 return{ CartCount: 0 }
     }
 }
@@ -30,8 +30,11 @@ export function ReducerDemo(){
 
     return(
         <div className="conatainer-fluid">
-            <h2 className="btn  border bi bi-cart4 m-2">Your cart <span className="btn btn-danger ">{state.CartCount}</span></h2><hr></hr>
+            <h2 className="btn btn-warning border bi bi-cart4 m-2">Your cart <span className="btn btn-danger ">{state.CartCount}</span></h2><hr></hr>
             <button className="btn btn-success" onClick={handleAddClick}>Add</button>
+            <button className="btn btn-danger" onClick={handleRemoveClick}>Remove</button>
+            <button className="btn btn-danger" onClick={handleRemoveClick}>Remove</button>
+            <button className="btn btn-danger" onClick={handleRemoveClick}>Remove</button>
             <button className="btn btn-danger" onClick={handleRemoveClick}>Remove</button>
         </div>
     )

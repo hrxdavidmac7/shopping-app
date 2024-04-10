@@ -7,6 +7,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 
 import { HookDemo } from './Hooks/MountUnmount';
 import { ReducerDemo } from './Hooks/reducer/reducer';
+import { Fakestore } from './components/fakestoreapi/fakestore';
+import { Register } from './class component/register';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -15,7 +17,8 @@ root.render(
     
    
 
-<ReducerDemo/>
+<Register/>
+
 
   
   </React.StrictMode>
